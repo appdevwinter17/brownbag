@@ -1,5 +1,7 @@
 ActiveAdmin.register Invitation do
 
+ permit_params :user_id, :event_id, :host_approval, :guest_approval, :confirmed_reservation, :public_request, :title, :description
+
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
