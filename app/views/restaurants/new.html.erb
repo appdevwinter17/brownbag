@@ -14,7 +14,7 @@
 
 <div class="row">
   <div class="col-md-12">
-    <form action="/create_restaurant" method="post">
+    <form action="/create_restaurant" method="post" enctype="multipart/form-data">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
@@ -87,7 +87,7 @@
           Picture url
         </label>
 
-        <input type="text" id="picture_url" name="picture_url" placeholder="Picture url" class="form-control" value="<%= @restaurant.picture_url %>">
+        <input type="file" id="picture_url" name="picture_url" class="form-control">
       </div>
 
       <button class="btn btn-success">
